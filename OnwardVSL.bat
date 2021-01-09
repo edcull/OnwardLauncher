@@ -14,6 +14,7 @@ echo #                                                  #
 echo ####################################################
 echo. 
 echo Select version to launch and press Enter
+echo [0] Create Desktop Shortcut
 echo [1] Launch Onward 1.7
 echo [2] Launch Onward 1.8
 
@@ -62,9 +63,9 @@ Rem ### Function to create desktop shortcut via temp vbscript###
 :create_shortcut
     set SCRIPT="%TEMP%\%RANDOM%-%RANDOM%-%RANDOM%-%RANDOM%.vbs"
     echo Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
-    echo sLinkFile = "%USERPROFILE%\Desktop\Onward Launcher.lnk" >> %SCRIPT%
+    echo sLinkFile = "%USERPROFILE%\Desktop\OnwardVSL.lnk" >> %SCRIPT%
     echo Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
-    echo oLink.TargetPath = "%CD%\OnwardLauncher.bat" >> %SCRIPT%
+    echo oLink.TargetPath = "%CD%\OnwardVSL.bat" >> %SCRIPT%
     echo oLink.WorkingDirectory = "%CD%" >> %SCRIPT% 
     echo oLink.IconLocation = "%CD%\Onward\Onward.exe,0" >> %SCRIPT%
     echo oLink.Save >> %SCRIPT%
