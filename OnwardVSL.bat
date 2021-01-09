@@ -76,14 +76,6 @@ Rem ### Function to rename folders for version 1.8 ###
     ) 
     %steam_exe% -applaunch 496240
     exit	
-
-Rem ### Function to launch Onward ###
-:launch_app
-    echo Please wait for Onward to launch
-    %steam_exe% -applaunch 496240
-    echo Press enter to exit
-    set /p input=
-    exit
 	
 Rem ### Function to restore 1.8 for steam updates ###
 :restore_18
