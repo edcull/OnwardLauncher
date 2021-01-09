@@ -1,7 +1,7 @@
 # Onward Launcher
-version 1.0
-Onward version quick swap utility script
-Created by Archetek and BigWing
+###### version 1.0
+###### Onward version quick swap utility script
+###### Created by Archetek and BigWing
 
 ### DISCLAIMER
 This solution uses a windows batch file to rename folders and launch the Onward Steam app. You should check the contents of batch files before running on your own machine to ensure that there are no malicious commands. I have tried to comment the commands as much as possible to help usersunderstand what they do.
@@ -35,13 +35,13 @@ The script prompts for the version of Onward the use wishes to launch (Options 0
   - The script will check for the presence of the **Onward17** directory alongside the active **Onward** directory
   - If the Onward17 directory is found, it is assumed that the **Onward** directory contains Onward 1.8 and the **Onward17** directory contains the Onward 1.7 files
   - accordingly, it renames the active **Onward** directory as **Onward18** and the **Onward17** directory to **Onward** to switch the active version to 1.7
-
+  - The script then launches Onward (App ID:496240) using the steam.exe command line (the Executable location being taken from the registry)
+  
 - Option 2 - For launching Onward 1.8:
   - The script will check for the presence of the **Onward18** directory alongside the active **Onward** directory
   - If the **Onward18** directory is found, it is assumed that the **Onward** directory contains Onward 1.7 and the **Onward18** directory contains the Onward 1.8 files
   - accordingly, it renames the active **Onward** directory as **Onward17** and the **Onward18** directory to **Onward** to switch the active version to 1.8
-
-The script then launches Onward (App ID:496240) using the steam.exe command line (the Executable location being taken from the registry)
+  - The script then launches Onward (App ID:496240) using the steam.exe command line (the Executable location being taken from the registry)
 
 - Option 0 - For creating Desktop Shortcut
   - The script creates a temporary VBScript to create a Desktop Shortcut
