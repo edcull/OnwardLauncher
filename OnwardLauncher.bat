@@ -9,6 +9,7 @@ echo #                Onward 1.7 Players                #
 echo #            https://discord.gg/EjjtFkft           #
 echo #                                                  #
 echo #             by Archetek and BigWing              # 
+echo #        with thanks to Ytrex and Monorchid        #
 echo #                                                  # 
 echo ####################################################
 echo. 
@@ -18,7 +19,7 @@ echo [2] Launch Onward 1.8
 
 Rem ### Find the Steam Executable location from the Registry ###
 FOR /F "usebackq tokens=3*" %%A IN (`REG QUERY "HKEY_CURRENT_USER\SOFTWARE\Valve\Steam" /v SteamExe`) DO (
-    set steam_exe=%%A %%B
+    set steam_exe="%%A %%B"
 )
 
 Rem ### Function to prompt for version to launch ###
