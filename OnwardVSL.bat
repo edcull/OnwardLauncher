@@ -3,7 +3,7 @@
 echo ####################################################
 echo #                                                  #
 echo #                    OnwardVSL                     #
-echo #     Onward Version Switcher and Launcher v1.0    #
+echo #  Onward Version Switcher and Launcher v2.0beta   #
 echo #                                                  #
 echo #                Onward 1.7 Players                #
 echo #            https://discord.gg/EjjtFkft           #
@@ -34,40 +34,48 @@ Rem ### Function to initialise the script by checking the correct folder structu
        set /p input=
        exit
    ) else (
-       goto :choice
+       Call :choice
    )
 
 Rem ### Function to prompt for version to launch ###
 :choice        
     echo Select version to launch and press Enter
-    echo [0] Create Desktop Shortcut
     echo [1] Launch Onward 1.7
     echo [2] Launch Onward 1.8
+    echo [3] Restore Onward 1.8 files for updates without launching
+    echo [4] Create Desktop Shotcut
+	
     set /P c= 
-    if /I "%c%" EQU "0" goto :create_shortcut
-    if /I "%c%" EQU "1" goto :launch_17
-    if /I "%c%" EQU "2" goto :launch_18	
-    goto :choice
+    if /I "%c%" EQU "1" Call :launch_17
+    if /I "%c%" EQU "2" Call :launch_18	
+	if /I "%c%" EQU "3" Call :restore_18	
+	if /I "%c%" EQU "4" Call :create_shortcut
+    Call :choice
     
 Rem ### Function to rename folders for version 1.7 ###
 :launch_17
-    echo Preparing to launch Onward 1.7
     IF EXIST Onward17 (
-        echo Renaming Folders
         RENAME Onward Onward18
         RENAME Onward17 Onward
     ) 
-    goto :launch_app
+    echo Please wait for Onward 1.7 to launch (it can take a while)
+	echo Keep this window open until you close the game to ensure that 1.8 is restored for updates 
+	%steam_exe% -applaunch 496240
+	echo Press enter to exit
+    set /p input=
+	echo Restoring Onward 1.8 files
+    RENAME Onward Onward17
+    RENAME Onward18 Onward
+	exit
 
 Rem ### Function to rename folders for version 1.8 ###
 :launch_18
-    echo Preparing to launch Onward 1.8
     IF EXIST Onward18 (
-        echo Renaming Folders
         RENAME Onward Onward17
         RENAME Onward18 Onward
     ) 
-    goto :launch_app
+    %steam_exe% -applaunch 496240
+    exit	
 
 Rem ### Function to launch Onward ###
 :launch_app
@@ -76,6 +84,15 @@ Rem ### Function to launch Onward ###
     echo Press enter to exit
     set /p input=
     exit
+	
+Rem ### Function to restore 1.8 for steam updates ###
+:restore_18
+    IF EXIST Onward18 (
+        RENAME Onward Onward17
+        RENAME Onward18 Onward
+    ) 	
+	echo Onward 1.8 files restored
+    Call :choice
    
 Rem ### Function to create desktop shortcut via temp vbscript###	
 :create_shortcut
@@ -90,4 +107,4 @@ Rem ### Function to create desktop shortcut via temp vbscript###
     cscript /nologo %SCRIPT%
     del %SCRIPT%
     echo Desktop Shortcut Created
-    goto :choice
+    Call :choice
