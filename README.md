@@ -1,7 +1,5 @@
-# Onward Launcher
-###### version 1.0
-###### Onward version quick swap utility script
-###### Created by Archetek and BigWing
+# Onward Launcher v1.0
+Onward version quick swap utility script created by Archetek and BigWing.
 
 ### DISCLAIMER
 This solution uses a windows batch file to rename folders and launch the Onward Steam app. You should check the contents of batch files before running on your own machine to ensure that there are no malicious commands. I have tried to comment the commands as much as possible to help usersunderstand what they do.
