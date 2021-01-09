@@ -1,4 +1,5 @@
-# Onward Version Switcher and Launcher OVSL v1.0
+# Onward Version Switcher and Launcher
+### OVSL v1.0
 Onward version quick swap utility script created by Archetek and BigWing.
 
 ### DISCLAIMER
