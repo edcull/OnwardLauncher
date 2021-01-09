@@ -12,7 +12,7 @@ This script just automates the process for switching Onward versions created by 
 - Windows Operating System
 - Steam version of Onward
 - Following BigWing's instructions to install Onward 1.7 and Onward 1.8 Folders
-  - It is recommended to keep the beta opt-in option to "1.7backup - 1.7backup" to prevent 1.8 updates from overwritting your 1.7 files
+  - For now it is recommended to keep the beta opt-in option to "1.7backup - 1.7backup" to prevent 1.8 updates from overwritting your 1.7 files. This will disable updates for 1.8
 - You should have either:
   - Onward 1.7 in the **Onward** folder and Onward 1.8 in the **Onward18** folder
   - Onward 1.8 in the **Onward** folder and Onward 1.7 in the **Onward17** folder
