@@ -19,7 +19,7 @@ This script just automates the process for switching Onward versions created by 
 ### INSTRUCTIONS
 
 - Optional. Open the **OnwardLauncher.bat** file in a text editor to check its contents are not malicious
-- Copy the **OnwardLauncher.bat** file into the parent directory of the Onward folders (The Steam library location containing Onward, i.e. *C:\Program Files (x86)\Steam\Steamapps\common*)
+- Copy the **OnwardLauncher.bat** file into the parent directory of the Onward folders (The Steam library location containing Onward, i.e. *C:\Program Files (x86)\Steam\steamapps\common*)
 - Run the **OnwardLauncher.bat** file
 - Optional. Choose the hidden "0" option to automatically create a desktop shortcut
 - Chose the "1" option to launch Onward 1.7, or the "2" option to launch Onward 1.8.
