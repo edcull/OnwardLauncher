@@ -3,7 +3,7 @@
 echo ####################################################
 echo #                                                  #
 echo #                    OnwardVSL                     #
-echo #         Onward Switcher and Launcher v1.0        #
+echo #     Onward Version Switcher and Launcher v1.0    #
 echo #                                                  #
 echo #                Onward 1.7 Players                #
 echo #            https://discord.gg/EjjtFkft           #
