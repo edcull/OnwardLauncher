@@ -1,4 +1,4 @@
-# Onward Launcher v1.0
+# Onward Version Switcher and Launcher OVSL v1.0
 Onward version quick swap utility script created by Archetek and BigWing.
 
 ### DISCLAIMER
@@ -19,15 +19,15 @@ This script just automates the process for switching Onward versions created by 
 
 ### INSTRUCTIONS
 
-- Optional. Open the **OnwardLauncher.bat** file in a text editor to check its contents are not malicious
-- Copy the **OnwardLauncher.bat** file into the parent folder of the Onward folders (The Steam library location containing Onward, i.e. *C:\Program Files (x86)\Steam\steamapps\common*)
-- Run the **OnwardLauncher.bat** file
+- Optional. Open the **OVSL.bat** file in a text editor to check its contents are not malicious
+- Copy the **OVSL.bat** file into the parent folder of the Onward folders (The Steam library location containing Onward, i.e. *C:\Program Files (x86)\Steam\steamapps\common*)
+- Run the **OVSL.bat** file
 - Optional. Choose the hidden "0" option to automatically create a desktop shortcut
 - Chose the "1" option to launch Onward 1.7, or the "2" option to launch Onward 1.8.
   - note: you can close the launcher immediately, but Onward may take a short time to check SteamVR is running before launching into VR
  
 
-### EXPLAINATION
+### EXPLANATION
 
 The script prompts for the version of Onward the user wishes to launch (Options 0, 1 or, 2)
 
