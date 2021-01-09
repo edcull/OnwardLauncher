@@ -14,7 +14,13 @@ CREDITS: This script just automates the process for switching Onward versions cr
 BigWing and Ytrex, based on work by Monorchild. My thanks to BigWing for
 extensive testing and troubleshooting.
 
-CHANGES: This version aims to allow Steam updates to Onward 1.8. To do this the beta-opt in needs to be set to "None" and the 1.8 files need to restored after running 1.7. This is highly experimental and may result in the 1.7/1.8 files getting mixed up resulting in redownloading of both versions of hte game
+CHANGES: This version aims to allow Steam updates to Onward 1.8. The aim here is to always
+keep the 1.8 files in the Onward directory and only rename the folders to put 1.7 files in
+the Onward directory when you are actually playing 1.7. With Steam updates disabled while
+in game, this should prevent 1.8 updates trying to overwrite 1.7 files. To do this the
+beta-opt in needs to be set to "None" and the 1.8 files need to restored after running 1.7.
+This is highly experimental and may result in the 1.7/1.8 files getting mixed up resulting
+in redownloading of both versions of the game
 
 
 PREREQUISITES:
