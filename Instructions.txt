@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------------
                      Onward Version Switcher and Launcher
-                               OnwardVSL v1.0
+                               OnwardVSL v1.01
                       created by Archetek and BigWing.
 --------------------------------------------------------------------------------------
 
@@ -13,6 +13,10 @@ they do.
 CREDITS: This script just automates the process for switching Onward versions created by
 BigWing and Ytrex, based on work by Monorchild. My thanks to BigWing for
 extensive testing and troubleshooting.
+
+CHANGES:
+
+- v1.01    Added brief summary of instructions to install both versions of Onward
 
 PREREQUISITES:
 
@@ -50,7 +54,6 @@ INSTRUCTIONS:
 - Chose the "1" option to launch Onward 1.7, or the "2" option to launch Onward 1.8.
   - note: you can close the launcher immediately, but Onward may take a short time
     to check SteamVR is running before launching into VR
- 
 
 EXPLANATION:
 

@@ -1,11 +1,15 @@
 # Onward Version Switcher and Launcher
-### OnwardVSL v1.0 created by Archetek and BigWing.
+### OnwardVSL v1.01 created by Archetek and BigWing.
 
 ### DISCLAIMER
 This solution uses a windows batch file to rename the Onward Steam Library folders and launch the Onward Steam application. You should check the contents of batch files before running on your own machine to ensure that there are no malicious commands. I have tried to comment the commands as much as possible to help users understand what they do.
 
 ### CREDITS
 This script just automates the process for switching Onward versions created by **BigWing** and **Ytrex**, based on work by **Monorchild**. My thanks to BigWing for extensive testing and troubleshooting.
+
+###CHANGES
+
+- v1.01    Added brief summary of instructions to install both versions of Onward
 
 ### PREREQUISITES
 
