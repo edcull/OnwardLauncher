@@ -1,19 +1,5 @@
 @ECHO OFF
-
-echo ####################################################
-echo #                                                  #
-echo #                    OnwardVSL                     #
-echo #  Onward Version Switcher and Launcher v2.0beta   #
-echo #                                                  #
-echo #                Onward 1.7 Players                #
-echo #            https://discord.gg/EjjtFkft           #
-echo #                                                  #
-echo #             by Archetek and BigWing              # 
-echo #        with thanks to Ytrex and Monorchid        #
-echo #                                                  # 
-echo ####################################################
-echo. 
-
+Title OnwardVSL v2.0beta
 
 Rem ### Find the Steam Executable location from the Registry ###
 FOR /F "usebackq tokens=3*" %%A IN (`REG QUERY "HKEY_CURRENT_USER\SOFTWARE\Valve\Steam" /v SteamExe`) DO (
@@ -27,29 +13,33 @@ Rem ### Function to initialise the script by checking the correct folder structu
    if not EXIST Onward17 if not EXIST Onward18 set init=false
    if "%init%"=="false" (
        echo Error: This script requires the presence of both an
-	   echo "Onward" echo folder and either an "Onward17" or
-	   echo "Onward18" folder as created by following BigWing's
-       echo instructions for downloading both versions of Onward.
+	   echo "Onward" folder and either an "Onward17" or "Onward18"
+       echo folder as created by following BigWing's instructions
+       echo for downloading both versions of Onward.
 	   echo Press enter to exit
        set /p input=
        exit
    ) else (
+       Call :title
        Call :choice
    )
 
 Rem ### Function to prompt for version to launch ###
 :choice        
-    echo Select version to launch and press Enter
-    echo [1] Launch Onward 1.7
-    echo [2] Launch Onward 1.8
-    echo [3] Restore Onward 1.8 files for updates without launching
-    echo [4] Create Desktop Shotcut
+    echo. 
+    echo Select command and press Enter
+    echo  [1] Launch Onward 1.7
+    echo  [2] Launch Onward 1.8
+    echo  [3] Restore Onward 1.8 files
+    echo  [4] Create Desktop Shotcut
+	echo  [5] Exit OnwardVSL
 	
     set /P c= 
     if /I "%c%" EQU "1" Call :launch_17
     if /I "%c%" EQU "2" Call :launch_18	
 	if /I "%c%" EQU "3" Call :restore_18	
 	if /I "%c%" EQU "4" Call :create_shortcut
+	if /I "%c%" EQU "5" exit
     Call :choice
     
 Rem ### Function to rename folders for version 1.7 ###
@@ -83,6 +73,10 @@ Rem ### Function to restore 1.8 for steam updates ###
         RENAME Onward Onward17
         RENAME Onward18 Onward
     ) 	
+	
+	cls
+	Call :title
+	echo. 
 	echo Onward 1.8 files restored
     Call :choice
    
@@ -98,5 +92,26 @@ Rem ### Function to create desktop shortcut via temp vbscript###
     echo oLink.Save >> %SCRIPT%
     cscript /nologo %SCRIPT%
     del %SCRIPT%
+	
+	cls
+	Call :title
+	echo. 
     echo Desktop Shortcut Created
     Call :choice
+	
+:title
+    echo #####################################################
+    echo #                                                   #
+    echo #                     OnwardVSL                     #
+    echo #   Onward Version Switcher and Launcher v2.0beta   #
+    echo #                                                   #
+    echo #                 Onward 1.7 Players                #
+    echo #             https://discord.gg/EjjtFkft           #
+    echo #                                                   #
+    echo #              by Archetek and BigWing              # 
+    echo #         with thanks to Ytrex and Monorchid        #
+    echo #                                                   # 
+    echo #####################################################
+	
+	
+	
