@@ -1,19 +1,5 @@
 @ECHO OFF
-
-echo ####################################################
-echo #                                                  #
-echo #                    OnwardVSL                     #
-echo #     Onward Version Switcher and Launcher v1.0    #
-echo #                                                  #
-echo #                Onward 1.7 Players                #
-echo #            https://discord.gg/EjjtFkft           #
-echo #                                                  #
-echo #             by Archetek and BigWing              # 
-echo #        with thanks to Ytrex and Monorchid        #
-echo #                                                  # 
-echo ####################################################
-echo. 
-
+Title OnwardVSL v1.0
 
 Rem ### Find the Steam Executable location from the Registry ###
 FOR /F "usebackq tokens=3*" %%A IN (`REG QUERY "HKEY_CURRENT_USER\SOFTWARE\Valve\Steam" /v SteamExe`) DO (
@@ -27,27 +13,30 @@ Rem ### Function to initialise the script by checking the correct folder structu
    if not EXIST Onward17 if not EXIST Onward18 set init=false
    if "%init%"=="false" (
        echo Error: This script requires the presence of both an
-	   echo "Onward" echo folder and either an "Onward17" or
-	   echo "Onward18" folder as created by following BigWing's
-       echo instructions for downloading both versions of Onward.
+	   echo "Onward" folder and either an "Onward17" or "Onward18"
+       echo folder as created by following BigWing's instructions
+       echo for downloading both versions of Onward.
 	   echo Press enter to exit
        set /p input=
        exit
    ) else (
-       goto :choice
+       Call :title
+       Call :choice
    )
 
 Rem ### Function to prompt for version to launch ###
-:choice        
+:choice     
+    echo.    
     echo Select version to launch and press Enter
     echo [0] Create Desktop Shortcut
     echo [1] Launch Onward 1.7
     echo [2] Launch Onward 1.8
+	
     set /P c= 
-    if /I "%c%" EQU "0" goto :create_shortcut
-    if /I "%c%" EQU "1" goto :launch_17
-    if /I "%c%" EQU "2" goto :launch_18	
-    goto :choice
+    if /I "%c%" EQU "0" Call :create_shortcut
+    if /I "%c%" EQU "1" Call :launch_17
+    if /I "%c%" EQU "2" Call :launch_18	
+    Call :choice
     
 Rem ### Function to rename folders for version 1.7 ###
 :launch_17
@@ -57,7 +46,7 @@ Rem ### Function to rename folders for version 1.7 ###
         RENAME Onward Onward18
         RENAME Onward17 Onward
     ) 
-    goto :launch_app
+    Call :launch_app
 
 Rem ### Function to rename folders for version 1.8 ###
 :launch_18
@@ -67,7 +56,7 @@ Rem ### Function to rename folders for version 1.8 ###
         RENAME Onward Onward17
         RENAME Onward18 Onward
     ) 
-    goto :launch_app
+    Call :launch_app
 
 Rem ### Function to launch Onward ###
 :launch_app
@@ -89,5 +78,22 @@ Rem ### Function to create desktop shortcut via temp vbscript###
     echo oLink.Save >> %SCRIPT%
     cscript /nologo %SCRIPT%
     del %SCRIPT%
+    cls
+	Call :title
+	echo. 
     echo Desktop Shortcut Created
-    goto :choice
+    Call :choice
+	
+:title
+    echo #####################################################
+    echo #                                                   #
+    echo #                     OnwardVSL                     #
+    echo #     Onward Version Switcher and Launcher v1.0     #
+    echo #                                                   #
+    echo #                 Onward 1.7 Players                #
+    echo #             https://discord.gg/EjjtFkft           #
+    echo #                                                   #
+    echo #              by Archetek and BigWing              # 
+    echo #         with thanks to Ytrex and Monorchid        #
+    echo #                                                   # 
+    echo #####################################################
