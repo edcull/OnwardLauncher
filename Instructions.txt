@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------------
                      Onward Version Switcher and Launcher
-                               OnwardVSL v2.0
+                               OnwardVSL v2.01
                       created by Archetek and BigWing.
 --------------------------------------------------------------------------------------
 
@@ -21,7 +21,9 @@ CHANGES:
 - v2.0     Allows Steam updates to Onward 1.8. Keeps the 1.8 files in the Onward
            directory and only renames the folders to put 1.7 files in the Onward
 		   directory when you are actually playing 1.7 to prevent 1.8 updates from
-		   overwriting 1.7 files. 
+		   overwriting 1.7 files.
+		   
+- v2.01    Added checks to see if the game is running to prevent game file corruption
 		   
 PREREQUISITES:
 
