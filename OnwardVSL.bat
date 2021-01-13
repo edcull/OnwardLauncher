@@ -1,5 +1,5 @@
 @ECHO OFF
-Title OnwardVSL v2.0beta
+Title OnwardVSL v2.0
 
 Rem ### Find the Steam Executable location from the Registry ###
 FOR /F "usebackq tokens=3*" %%A IN (`REG QUERY "HKEY_CURRENT_USER\SOFTWARE\Valve\Steam" /v SteamExe`) DO (
@@ -103,7 +103,7 @@ Rem ### Function to create desktop shortcut via temp vbscript###
     echo #####################################################
     echo #                                                   #
     echo #                     OnwardVSL                     #
-    echo #   Onward Version Switcher and Launcher v2.0beta   #
+    echo #     Onward Version Switcher and Launcher v2.0     #
     echo #                                                   #
     echo #                 Onward 1.7 Players                #
     echo #             https://discord.gg/EjjtFkft           #

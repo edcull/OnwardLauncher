@@ -12,29 +12,36 @@ This script just automates the process for switching Onward versions created by 
 
 - v1.01    Added brief summary of instructions to install both versions of Onward
 
-- v2.0beta This version aims to allow Steam updates to Onward 1.8. The aim here is to always keep the 1.8 files in the Onward directory and only rename the folders to put 1.7 files in the Onward directory when you are actually playing 1.7. With Steam updates disabled while in game, this should prevent 1.8 updates trying to overwrite 1.7 files. To do this the beta-opt in needs to be set to "None" and the 1.8 files need to restored after running 1.7. This is highly experimental and may result in the 1.7/1.8 files getting mixed up resulting in re-downloading of both versions of the game
+- v2.0     Allows Steam updates to Onward 1.8. Keeps the 1.8 files in the Onward directory and only renames the folders to put 1.7 files in the Onward directory when you are actually playing 1.7 to prevent 1.8 updates from overwriting 1.7 files.
 
 ### PREREQUISITES
 
 - Windows Operating System
 - Steam version of Onward
-- Following BigWing's instructions to install Onward 1.7 and Onward 1.8 Folders
-
-  - A quick summary of the full instructions; first opt in to the Onward "1.7backup - 1.7backup" beta and install Onward 1.7 in Steam, then rename the **"Onward"** folder in the Steam Library to **"Onward17"**. Next switch to the "None" beta opt-in to start downloading 1.8 into a new **"Onward"** folder.
-
-  - This version aims to allow for 1.8 updates and requires the beta opt-in option to be kept to "None".
-	
-- You should have:
-  - Onward 1.8 in the **"Onward"** folder and Onward 1.7 in the **"Onward17"** folder
 
 ### INSTRUCTIONS
 
-- Optional. Open the **OnwardVSL.bat** file in a text editor to check its contents are not malicious
-- Copy the **OnwardVSL.bat** file into the parent folder of the Onward folders (The Steam library location containing Onward, i.e. *C:\Program Files (x86)\Steam\steamapps\common*)
-- Run the **OnwardVSL.bat** file
-- Optional. Choose the "3" option to automatically create a desktop shortcut
-- Chose the "1" option to launch Onward 1.7, or the "2" option to launch Onward 1.8.
-  - note: you can close the launcher immediately, but Onward may take a short time to check SteamVR is running before launching into VR
+- Install Onward 1.7 and Onward 1.8 Folders
+  - Install Onward 1.7 by changing the Beta Opt-in to "1.7backup - 1.7backup"
+    - Right click Onward in your steam library and select "Properties". In the Betas tab select "1.7backup - 1.7backup" in the dropdown	
+  - After downloading the 1.7 files, rename the "Onward" game folder to "Onward17"
+    - The game folder can be found in the Steam Library location where Onward was installed i.e. C:\Program Files (x86)\Steam\steamapps\common  
+  - Switch the Beta Opt-in to back to "None" to start downloading 1.8 into a new "Onward" folder 	
+  - You should now have Onward 1.8 in the "Onward" folder and Onward 1.7 in the "Onward17" folder	
+  - Keep the beta opt-in option to "None"
+ 
+- Copy the OnwardVSL.bat file into the parent directory of the Onward folders i.e. C:\Program Files (x86)\Steam\steamapps\common
+  
+- Run the OnwardVSL.bat file
+
+- Optional. Choose option "4" to automatically create a desktop shortcut
+
+- Chose option "1" to launch Onward 1.7.
+  - Keep the script window open until you exit the game
+  - Pressing Enter will reset the game files to 1.8 if the game isn't running and the script will exit
+  - You can manually restore the 1.8 files with the "3" option
+
+- Chose option "2" to launch Onward 1.8. The script will exit automatically
  
 
 ### EXPLANATION
