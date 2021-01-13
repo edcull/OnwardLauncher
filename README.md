@@ -48,7 +48,7 @@ OnwardVSL menu options
     - If the **"Onward17"** folder is found, it is assumed that the **"Onward"** folder contains Onward 1.8 and the **"Onward17"** folder contains Onward 1.7
     - Accordingly, OnwardVSL renames the **"Onward"** folder to **"Onward18"** and the **"Onward17"** folder to **"Onward"** to switch the active version to 1.7
   - OnwardVSL then launches Onward (App ID:496240) using the steam.exe command line (the Steam executable location being taken from the registry)
-  - OnwardVSL then prompts for the window to be left open until after closing the game so that it can restore version 1.8
+  - OnwardVSL then prompts for the window to be left open until after closing the game so that it can restore version 1.8 to the **"Onward"** folder
     - Pressing "Enter" in the OnwardVSL window when the game has exited will restore version 1.8 into the **"Onward"** folder and move version 1.7 files into the **"Onward17"** folder
     - If the window is closed before you exit Onward 1.7 then you can manually restore version 1.8 to the **"Onward"** folder with menu option "3". This is nessessary to ensure that version 1.8 files are in the "Onward" folder for Steam updates
 	
@@ -59,7 +59,7 @@ OnwardVSL menu options
     - Accordingly, OnwardVSL renames the **"Onward"** folder to **"Onward17"** and the **"Onward18"** folder to **"Onward"** to switch the active version to 1.8
   - OnwardVSL then launches Onward (App ID:496240) using the steam.exe command line (the Steam executable location being taken from the registry)
   
-- Chose menu option "3" to manually restore version 1.8 
+- Chose menu option "3" to manually restore version 1.8 to the **"Onward"** folder
   - OnwardVSL will rename the Onward game folders as nessessary to ensure version 1.8 is the active version
     - OnwardVSL will check for the presence of the **"Onward18"** folder alongside the active **"Onward"** folder
     - If the **"Onward18"** folder is found, it is assumed that the **"Onward"** folder contains Onward 1.7 and the **"Onward18"** folder contains Onward 1.8

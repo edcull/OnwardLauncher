@@ -77,7 +77,7 @@ OnwardVSL menu options
     (the Steam executable location being taken from the registry)
 	
   - OnwardVSL then prompts for the window to be left open until after closing the game
-    so that it can restore version 1.8
+    so that it can restore version 1.8 to the "Onward" folder
     - Pressing "Enter" in the OnwardVSL window when the game has exited will restore
 	  version 1.8 into the "Onward" folder and move version 1.7 files into the
 	  "Onward17" folder
@@ -99,7 +99,7 @@ OnwardVSL menu options
   - OnwardVSL then launches Onward (App ID:496240) using the steam.exe command line
     (the Steam executable location being taken from the registry)
   
-- Chose menu option "3" to manually restore version 1.8
+- Chose menu option "3" to manually restore version 1.8 to the "Onward" folder
  
   - OnwardVSL will rename the Onward game folders as nessessary to ensure version 1.8
     is the active version

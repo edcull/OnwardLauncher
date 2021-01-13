@@ -30,7 +30,7 @@ Rem ### Function to prompt for version to launch ###
     echo Select command and press Enter
 	echo  [1] Launch Onward 1.7
 	echo  [2] Launch Onward 1.8
-	echo  [3] Manually restore Version 1.8.x
+	echo  [3] Manually restore version 1.8.x
 	echo  [4] Create Desktop Shortcut
 	echo  [5] Exit OnwardVSL
 		
