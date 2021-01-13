@@ -41,18 +41,18 @@ INSTRUCTIONS:
 	
   - After downloading the 1.7 files, rename the "Onward" game folder to "Onward17"
     - The game folder can be found in the Steam Library location where Onward was
-	  installed i.e. C:\Program Files (x86)\Steam\steamapps\common
+	  installed eg. C:\Program Files (x86)\Steam\steamapps\common
   
-  - Switch the Beta Opt-in to back to "None" to start downloading 1.8 into a new "Onward"
+  - Switch the Beta Opt-in back to "None" to start downloading 1.8 into a new "Onward"
     folder 
 	
   - You should now have Onward 1.8 in the "Onward" folder and Onward 1.7 in the "Onward17"
     folder
 	
-  - Keep the beta opt-in option to "None"
+  - Keep the beta opt-in option to "None" to receive 1.8 updates through Steam
  
 - Copy the OnwardVSL.bat file into the parent directory of the Onward folders
-  i.e. C:\Program Files (x86)\Steam\steamapps\common
+  eg. C:\Program Files (x86)\Steam\steamapps\common
   
 - Run the OnwardVSL.bat file
 
@@ -60,9 +60,9 @@ INSTRUCTIONS:
 
 - Chose option "1" to launch Onward 1.7.
   - Keep the script window open until you exit the game
-  - Pressing Enter will reset the game files to 1.8 if the game isn't running
-  - If the window is closed before you exit Onward 1.7 then you can manually restore the 1.8
-    files for updates with the menu option "3"
+  - Pressing Enter will restore version 1.8 as long as the game isn't running
+  - If the window is closed before you exit Onward 1.7 then you can manually restore version
+    1.8 with menu option "3"
 
 - Chose menu option "2" to launch Onward 1.8
  
@@ -81,8 +81,8 @@ The script prompts for the version of Onward the user wishes to launch (Options 
   - The script then launches Onward (App ID:496240) using the steam.exe command line
     (the Steam executable location being taken from the registry)
   - The script them prompts for the window to be left open until after closing the game
-  - Pressing enter when the game has exited will restore the 1.8 files into the "Onward"
-    folder and 1.7 files into the "Onward17" folder
+  - Pressing enter when the game has exited will restore version 1.8 into the "Onward"
+    folder and move version 1.7 files into the "Onward17" folder
   
 - Option 2 - For launching Onward 1.8:
   - The script will check for the presence of the "Onward18" folder alongside the active
@@ -95,8 +95,8 @@ The script prompts for the version of Onward the user wishes to launch (Options 
    (the Steam executable location being taken from the registry)
 
 - Option 3 - For manually restoring 1.8 files
-  - The script will restore the 1.8 files into the "Onward" folder and 1.7 files into the
-    "Onward17" folder 
+  - The script will restore version 1.8 into the "Onward" folder and move version 1.7 files
+    into the "Onward17" folder 
   
 - Option 4 - For creating a Desktop Shortcut
   - The script creates a temporary VBScript to create a Desktop Shortcut to the batch file

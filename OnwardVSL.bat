@@ -30,8 +30,8 @@ Rem ### Function to prompt for version to launch ###
     echo Select command and press Enter
 	echo  [1] Launch Onward 1.7
 	echo  [2] Launch Onward 1.8
-	echo  [3] Restore Onward 1.8 files
-	echo  [4] Create Desktop Shotcut
+	echo  [3] Manually restore Version 1.8.x
+	echo  [4] Create Desktop Shortcut
 	echo  [5] Exit OnwardVSL
 		
 	set /P c= 
@@ -62,7 +62,7 @@ Rem ### Function to rename folders for version 1.7 ###
 	)
 	
 :exit_17
-    echo After exiting the game, press enter to restore 1.8 files
+    echo After exiting the game, press enter to restore Version 1.8.x
 	set /p input=
 	
 	tasklist /FI "IMAGENAME eq Onward.exe" 2>NUL | find /I /N "Onward.exe" >NUL	
@@ -74,7 +74,7 @@ Rem ### Function to rename folders for version 1.7 ###
             RENAME Onward Onward17
             RENAME Onward18 Onward
         ) 
-        Call :title 1, "Onward 1.8 files restored"
+        Call :title 1, "Version 1.8.x restored"
 	)
 
 Rem ### Function to rename folders for version 1.8 ###
@@ -104,7 +104,7 @@ Rem ### Function to restore 1.8 for steam updates ###
             RENAME Onward Onward17
             RENAME Onward18 Onward
         ) 	
-        Call :title 1, "Onward 1.8 files restored"
+        Call :title 1, "Version 1.8.x restored"
 	)
    
 Rem ### Function to create desktop shortcut via temp vbscript###	
